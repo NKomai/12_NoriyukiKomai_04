@@ -28,7 +28,41 @@ public class kadai01 {
             ansArray[5] = "1：家でだらだら　2：部屋の片付け　3：外に散歩　4：外で運動";
             ansArray[6] = "1：うどん　2：焼き肉　3：寿司　4：フランス料理";
             ansArray[7] = "1：豪運の持ち主　2：悪くはない　3：ちょっと悪いかもしれない　4：おみくじは必ず大凶";
-            
+
+        int ansPoint[][] = new int[8][4];
+            ansPoint[0][0]=0;
+            ansPoint[0][1]=1;
+            ansPoint[0][2]=2;
+            ansPoint[0][3]=5;
+            ansPoint[1][0]=0;
+            ansPoint[1][1]=1;
+            ansPoint[1][2]=4;
+            ansPoint[1][3]=5;
+            ansPoint[2][0]=0;
+            ansPoint[2][1]=1;
+            ansPoint[2][2]=2;
+            ansPoint[2][3]=3;
+            ansPoint[3][0]=0;
+            ansPoint[3][1]=1;
+            ansPoint[3][2]=2;
+            ansPoint[3][3]=3;
+            ansPoint[4][0]=0;
+            ansPoint[4][1]=2;
+            ansPoint[4][2]=3;
+            ansPoint[4][3]=5;
+            ansPoint[5][0]=0;
+            ansPoint[5][1]=1;
+            ansPoint[5][2]=1;
+            ansPoint[5][3]=5;
+            ansPoint[6][0]=0;
+            ansPoint[6][1]=0;
+            ansPoint[6][2]=0;
+            ansPoint[6][3]=5;
+            ansPoint[7][0]=1;
+            ansPoint[7][1]=0;
+            ansPoint[7][2]=0;
+            ansPoint[7][3]=5;
+
         //点数と問題数チェックの初期化
         int point = 0;
         int total = 0;
@@ -55,7 +89,7 @@ public class kadai01 {
             }
 
             //int型変数pointにchoiceの値を足して行くことで、総合点を計算
-            point += choice;
+            point += ansPoint[num][(choice-1)];
 
             //使用した質問と回答を配列から取り除く処理
             //　①配列をリスト化する
@@ -81,14 +115,16 @@ public class kadai01 {
         System.out.println("==========【結果発表】==========");
 
         //点数に応じた判定
-        if(point == 5){
+        if(point <= 5){
             System.out.println("お前は俺か？　と言いたいくらい相性がいいです。");
         }else if(6 <= point && point <=9){
             System.out.println("めっちゃ相性いいです。できるだけ楽をして生きましょう。");
-        }else if(10 <= point && point <=13){
+        }else if(10 <= point && point <=14){
             System.out.println("あんまり相性良くないです。もっと怠惰に生きましょう。");
+        }else if(15 <= point && point <=17){
+            System.out.println("相性悪いです。多分一生相容れないでしょう");
         }else{
-            System.out.println("相性悪いです。例え死んでも相容れることは無いでしょう。");
+            System.out.println("目と目が合ったら戦争ですね。");
         }
 
 
