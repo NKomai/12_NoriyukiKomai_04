@@ -9,6 +9,7 @@ public class kadai01 {
         Random random = new Random(); //ランダム使用の宣言
 
         //質問と回答と点数を対応する形で配列に格納
+        //質問一覧
         String quesArray[] = new String[8];
             quesArray[0] = "できれば働きたくない";
             quesArray[1] = "不労所得が欲しい";
@@ -18,7 +19,7 @@ public class kadai01 {
             quesArray[5] = "休みの日は何をして過ごす？";
             quesArray[6] = "次の4つの中で一番好きな食べ物は？";
             quesArray[7] = "運はいい方だ";
-
+        //回答一覧
         String ansArray[] = new String[8];
             ansArray[0] = "1：そう思う　2：まぁそう思う　3：あまりそう思わない　4：そうは思わない";
             ansArray[1] = "1：そう思う　2：まぁそう思う　3：あまりそう思わない　4：そうは思わない";
@@ -28,40 +29,40 @@ public class kadai01 {
             ansArray[5] = "1：家でだらだら　2：部屋の片付け　3：外に散歩　4：外で運動";
             ansArray[6] = "1：うどん　2：焼き肉　3：寿司　4：フランス料理";
             ansArray[7] = "1：豪運の持ち主　2：悪くはない　3：ちょっと悪いかもしれない　4：おみくじは必ず大凶";
-
+        //点数一覧。{{1,2,3,4}……}の形でもかけるが、管理しやすいように敢えて分けた。
         int ansPoint[][] = new int[8][4];
-            ansPoint[0][0]=0;
-            ansPoint[0][1]=1;
-            ansPoint[0][2]=2;
-            ansPoint[0][3]=5;
-            ansPoint[1][0]=0;
-            ansPoint[1][1]=1;
-            ansPoint[1][2]=4;
-            ansPoint[1][3]=5;
-            ansPoint[2][0]=0;
-            ansPoint[2][1]=1;
-            ansPoint[2][2]=2;
-            ansPoint[2][3]=3;
-            ansPoint[3][0]=0;
-            ansPoint[3][1]=1;
-            ansPoint[3][2]=2;
-            ansPoint[3][3]=3;
-            ansPoint[4][0]=0;
-            ansPoint[4][1]=2;
-            ansPoint[4][2]=3;
-            ansPoint[4][3]=5;
-            ansPoint[5][0]=0;
-            ansPoint[5][1]=1;
-            ansPoint[5][2]=1;
-            ansPoint[5][3]=5;
-            ansPoint[6][0]=0;
-            ansPoint[6][1]=0;
-            ansPoint[6][2]=0;
-            ansPoint[6][3]=5;
-            ansPoint[7][0]=1;
-            ansPoint[7][1]=0;
-            ansPoint[7][2]=0;
-            ansPoint[7][3]=5;
+            ansPoint[0][0] = 0;
+            ansPoint[0][1] = 1;
+            ansPoint[0][2] = 2;
+            ansPoint[0][3] = 5;
+            ansPoint[1][0] = 0;
+            ansPoint[1][1] = 1;
+            ansPoint[1][2] = 4;
+            ansPoint[1][3] = 5;
+            ansPoint[2][0] = 0;
+            ansPoint[2][1] = 1;
+            ansPoint[2][2] = 2;
+            ansPoint[2][3] = 3;
+            ansPoint[3][0] = 0;
+            ansPoint[3][1] = 1;
+            ansPoint[3][2] = 2;
+            ansPoint[3][3] = 3;
+            ansPoint[4][0] = 0;
+            ansPoint[4][1] = 2;
+            ansPoint[4][2] = 3;
+            ansPoint[4][3] = 5;
+            ansPoint[5][0] = 0;
+            ansPoint[5][1] = 1;
+            ansPoint[5][2] = 1;
+            ansPoint[5][3] = 5;
+            ansPoint[6][0] = 0;
+            ansPoint[6][1] = 0;
+            ansPoint[6][2] = 0;
+            ansPoint[6][3] = 5;
+            ansPoint[7][0] = 1;
+            ansPoint[7][1] = 0;
+            ansPoint[7][2] = 0;
+            ansPoint[7][3] = 5;
 
         //点数と問題数チェックの初期化
         int point = 0;
